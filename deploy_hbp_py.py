@@ -43,7 +43,11 @@ Gtp=st.number_input("GTP",min_value=0,max_value=1000,value=0)
 dental_caries=st.number_input("dental caries",min_value=0,max_value=1000,value=0)
 smoking=st.number_input("smoking",min_value=0,max_value=100,value=0)
 if st.button("HyperTension test result"):
-    input_features = [[age, height]] 
+    input_features = [[age, height,weight,waist,eyesight,
+       eyesight,hearing,hearing,systolic,
+       relaxation, fasting_blood_sugar,Cholesterol, triglyceride,
+       HDL,LDL,hemoglobin, Urine_protein,serum_creatinine,AST,
+       ALT,Gtp,dental_caries,smoking]] 
     prediction = model.predict(input_features)[0]
     if prediction == 0:
             st.subheader("The person doesn't have Hypertension.")
