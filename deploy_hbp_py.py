@@ -56,3 +56,12 @@ if st.button("HyperTension test result"):
 else:
         st.subheader("Please enter a text for prediction.")
 
+st.write("Debug: Input Features Shape:", len(input_features))
+st.write("Debug: Input Features:", input_features)
+
+
+prediction = model.predict(input_features)[0]
+
+
+st.write("Debug: Model Prediction Result:", prediction)
+
