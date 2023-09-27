@@ -24,9 +24,11 @@ height = st.number_input("Height of a person",min_value=0,max_value=400,value=0)
 
 
 if st.button("HyperTension test result"):
-   if prediction == 0:
+    input_features = [[age, height]] 
+    prediction = model.predict(input_features)[0]
+    if prediction == 0:
             st.subheader("The person doesn't have Hypertension.")
-   elif prediction == 1:
+    elif prediction == 1:
             st.subheader("The person have Hypertension.")
 else:
         st.subheader("Please enter a text for prediction.")
