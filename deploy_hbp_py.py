@@ -11,7 +11,7 @@ import streamlit as st
 import pickle
 from PIL import Image
 
-with open("svm_model (2)", "rb") as file:
+with open("svm_model (2).pkl", "rb") as file:
     model = pickle.load(file)
 
 st.title("HIGH BLOOD PRESSURE")
