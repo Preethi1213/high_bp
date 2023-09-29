@@ -37,8 +37,6 @@ input_features = None
 
 if st.button("HyperTension test result"):
     input_features = [[age, height, weight, waist, systolic, relaxation, fasting_blood_sugar, Cholesterol, HDL, LDL, hemoglobin, smoking]]
-    st.write("Debug: Input Features Shape:", len(input_features))
-    st.write("Debug: Input Features:", input_features)
     prediction = model.predict(input_features)[0]
     if prediction == 0:
         st.subheader("The person doesn't have Hypertension.")
